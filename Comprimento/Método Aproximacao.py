@@ -18,6 +18,6 @@ for i in range(len(intervalo)-1):
     d = (deltaX**2 + deltaY**2)**0.5 # Distância entre os Dois Pontos
     L += d # Soma ao Comprimento da Curva
 
-print(f"Comprimento Aproximado da Curva: {L}u")
+print(f"Comprimento Aproximado da Curva: {L:.3f}u")
 
 

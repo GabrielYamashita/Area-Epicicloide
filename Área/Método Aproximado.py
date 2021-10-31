@@ -25,6 +25,6 @@ for i in range(len(intervalo)-1):
     p = (a+b+c)/2 # Formula de Herão (p)
     A += (p*(p-a)*(p-b)*(p-c))**0.5 # Formula de Herão (fórmula)
 
-print(f"Área Aproximado da Curva: {5*A}") # Multiplica por 5 porque a Curva é simétrica
+print(f"Área Aproximado da Curva: {5*A:.3f}u\u00b2") # Multiplica por 5 porque a Curva é simétrica
 
 

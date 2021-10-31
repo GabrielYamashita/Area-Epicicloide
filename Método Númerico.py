@@ -34,14 +34,14 @@ tipo = input('Qual tipo de Cálculo: ') # Seleciona se é Cálculo da Área(A) o
 
 for i in range(len(erroMax)):
    if tipo.lower() in ['a', 'area', 'área']:
-      n = erro(ti,tf,erroMax[i],dMaxC)
+      n = erro(1.64,2.13,erroMax[i],dMaxC)
       print(f"Erro: {erroMax[i]}u\u00b2")
       print(f"n: {n} trapézios")
-      print(f"Área Aproximada: {abs(metodoTrapezios(ti, tf, n)):.2f}u\u00b2\n")
+      print(f"Área Aproximada: {5*(abs(metodoTrapezios(1.64, 2.13, n))):.2f}u\u00b2\n")
 
    elif tipo.lower() in ['c', 'comprimento']:
       n = erro(ti,tf,erroMax[i],dMaxA)
-      print(f"Erro: {erroMax[i]}u\u00b2")
+      print(f"Erro: {erroMax[i]}u")
       print(f"n: {n} trapézios")
       print(f"Comprimento Aproximado: {abs(metodoTrapezios(ti, tf, n)):.2f}u\n")
 
