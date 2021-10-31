@@ -1,8 +1,7 @@
-import math
 from PIL import Image
 from tqdm import tqdm
 
-image = Image.open("Curva.png")
+image = Image.open("./CurvaTratada.png")
 curva = image.convert("RGB")
 
 width, height = image.size
@@ -22,13 +21,12 @@ for i in range(height):
             areaCurva += 1
 loop.close()
 
-areaReal = 15.392 * 16.180
-
+areaReal = 31.28 * 20.47 # Dimensões da Imagem
 imgReal = areaReal * areaCurva/areaTotal
-Calculo = 56*math.pi
+Calculo = 228.79 # Resultado do Cálculo Numérico
 
 print(f"Método Computacional: {imgReal:.2f}u")
 print(f"Cálculo na mão: {Calculo:.2f}u")
 
-erroPercentual = 100-((imgReal*100)/Calculo)
+erroPercentual = abs(100-((imgReal*100)/Calculo))
 print(f"Erro Percentil: {erroPercentual:.2f}%")
